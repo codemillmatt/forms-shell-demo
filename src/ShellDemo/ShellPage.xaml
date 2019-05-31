@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:pages="clr-namespace:ShellDemo"
+    x:Class="ShellDemo.ShellPage">
+        
+    <!-- This puts the first 2 things in a flyout & then tabs, the last as its own flyout -->
+    <!-- Reintroduce the tab elements when putting navigation into place -->
+    <FlyoutItem Title="City Info" Route="cityinfo">
+        <Tab Route="cityinfopage" Title="City Info">
+            <pages:CityInfoPage Title="City Info" />
+        </Tab>
+        <Tab Route="busroute" Title="Bus Routes">
+            <pages:BusRoutePage Title="Bus Routes" />        
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Tourist Site of the Day" Route="touristsite">
+        <pages:TouristSitePage Title="Tourist Site" />
+    </FlyoutItem>
+    
+    
+    <!-- This makes everything its own flyout item
+    <pages:CityInfoPage Title="City Info" />
+    <pages:BusRoutePage Title="Bus Routes" />        
+    <pages:BusStopPage Title="Bus Stop" />
+    -->
+    
+    <!-- This puts everything into tabs (disable the flyout on the Shell)
+    <FlyoutItem Title="All Tabs" FlyoutDisplayOptions="AsMultipleItems">
+        <pages:CityInfoPage Title="City Info" />
+        <pages:BusRoutePage Title="Bus Routes" />        
+        <pages:BusStopPage Title="Bus Stop" Shell.NavBarIsVisible="false" />
+    </FlyoutItem>
+    -->
+    
+    <!-- Menu Items are like buttons -->    
+    <MenuItem Text="About" Command="{Binding AboutCommand}" />
+       
+</Shell>
