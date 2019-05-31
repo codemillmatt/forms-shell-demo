@@ -11,6 +11,7 @@ Shell provides a container for your app. That container includes a `MasterDetail
 This repo aims to show you how to make the most use of Shell so you can get it integrated into your apps in no time!
 
 Here's the app that we'll be building!
+
 ![cool app gif](images/demo.gif)
 
 ## Flyout
